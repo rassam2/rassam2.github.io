@@ -1,0 +1,128 @@
+body {
+margin: 0;
+overflow-x: hidden;
+
+
+
+
+
+
+}
+
+
+
+h2,
+p {
+margin: 10px;
+}
+
+ul {
+list-style-type: none;
+padding: 15px;
+background-color: white;
+display: flex;
+width: 100%;
+box-sizing: border-box;
+display: flex;
+
+
+}
+
+li {
+
+margin: 0 10px;
+
+
+
+/* space between buttons */
+}
+
+ul li a {
+
+color: rgb(0, 0, 0);
+padding: 14px 16px;
+text-decoration: none;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+background-color: rgb(135, 135, 135);
+color: white;
+border-radius: 60%;
+border-style: ridge;
+}
+
+ul li a:hover {
+background-color: rgb(69, 69, 69);
+color: white;
+border-radius: 60%;
+border-style: ridge;
+
+/* makes hover stand out */
+}
+
+
+.logo {
+font-weight: bolder;
+padding: 20px 37px;
+width: 4%;
+}
+
+.nav-links {
+flex: 1;
+display: flex;
+justify-content: center;
+margin-top: 2.1%;
+
+
+}
+
+
+.backround-image img {
+width: 100%;
+height: auto;
+display: block;
+z-index: 1;
+}
+
+
+.text h1 {
+font-family: 'League Spartan', sans-serif;
+font-size: 74.6px;
+color: rgb(0, 0, 0);
+position: absolute;
+bottom: 10px;
+margin-top: 100px;
+right: 77%;
+z-index: 2;
+top: 60px;
+text-align: center;
+
+
+}
+
+.text h2 {
+font-family: 'League Spartan', sans-serif;
+color: rgb(0, 0, 0);
+position: absolute;
+margin-top: 170px;
+right: 67%;
+z-index: 2;
+top: 60px;
+text-align: center;
+
+}
+
+.text pre {
+font-family: 'League Spartan', sans-serif;
+color: rgb(0, 0, 0);
+position: absolute;
+top: 60px;
+right: 68%;
+margin-top: 230px;
+z-index: 2;
+text-align: left;
+text-indent: 0;
+white-space: pre-line;
+line-height: 1.6;
+font-size: 1.1rem;
+
+}
+
