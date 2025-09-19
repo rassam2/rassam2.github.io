@@ -1,0 +1,455 @@
+/* -------------------- Body & Background -------------------- */
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: url("images/backround2.jpg") no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+
+}
+
+/* -------------------- Navigation -------------------- */
+ul {
+    list-style-type: none;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+li {
+    margin: 0 10px;
+}
+
+ul li a {
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(135, 135, 135);
+    color: white;
+    border-radius: 60%;
+    border-style: ridge;
+}
+
+ul li a:hover {
+    background-color: rgb(69, 69, 69);
+}
+
+/* Logo */
+.logo {
+    padding: 20px 37px;
+    width: 4%;
+}
+
+.nav-links {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin-top: 2.1%;
+}
+
+/* -------------------- Hide old <img> -------------------- */
+.backround-image {
+    display: none;
+
+}
+
+.text {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    margin-left: 4%;
+    width: 35%;
+
+}
+
+.text h1 {
+
+    font-size: 70px;
+
+}
+
+.text h1,
+h2 {
+    margin: 0;
+
+    padding: 0;
+
+}
+
+.text h1 {
+    margin-bottom: 5px;
+
+}
+
+
+
+
+
+
+
+
+
+
+/* -------------------- Grey Overlay Section -------------------- */
+.overlay {
+    position: relative;
+    background-color: rgba(128, 128, 128, 0.6);
+    display: flex;
+    align-items: flex-start;
+    margin-top: 43%;
+
+    z-index: 1;
+
+}
+
+.about-me {
+    color: white;
+    width: 100%;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid rgb(255, 255, 255);
+    width: 100%;
+    margin: 40px auto;
+}
+
+.about-me h1 {
+    font-size: 70px;
+    font-style: italic;
+    padding: 40px;
+    font-weight: bold;
+}
+
+.about-me h2 {
+    font-size: 30px;
+}
+
+/* ------------------ Enhanced Section Cards ------------------ */
+.who-am-i,
+.interests,
+.education {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    margin: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.who-am-i:hover,
+.interests:hover,
+.education:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* ------------------ Headings ------------------ */
+.who-am-i h2,
+.interests h2,
+.education h2 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ffffff;
+    display: inline-block;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ------------------ Paragraphs ------------------ */
+.who-am-i p,
+.interests p,
+.education p {
+    font-size: 1.1rem;
+    color: #f0f0f0;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* ------------------ Responsive Tweaks ------------------ */
+@media (max-width: 768px) {
+
+    .who-am-i,
+    .interests,
+    .education {
+        margin: 20px;
+        padding: 30px;
+    }
+
+    .who-am-i h2,
+    .interests h2,
+    .education h2 {
+        font-size: 1.5rem;
+    }
+
+    .who-am-i p,
+    .interests p,
+    .education p {
+        font-size: 1rem;
+    }
+}
+
+
+/*------------------Skills Sections----------------*/
+
+.skills {
+    background-color: black;
+
+    padding: 40px;
+}
+
+
+
+.skills h2 {
+    text-align: center;
+}
+
+.skills p {
+    color: rgb(92, 92, 92);
+    text-align: center;
+}
+
+
+.skills h3 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    text-align: left;
+}
+
+
+.bars {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 20px;
+}
+
+
+.bar-item {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+
+}
+
+
+.progress-bar {
+    width: 80%;
+    height: 16px;
+
+    background-color: rgb(51, 51, 51);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 5px;
+
+}
+
+
+.progress-fill {
+    height: 100%;
+    background-color: rgb(31, 167, 0);
+    width: 0;
+    border-radius: 12px 0 0 12px;
+    transition: width 1s ease-in-out;
+    padding-left: 10px;
+    text-align: left;
+    color: white;
+}
+
+/*------------------Project Page Sections----------------*/
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 40px;
+}
+
+.project-box {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.project-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.project-box:hover img {
+    transform: scale(1.1);
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-box:hover .overlay-text {
+    opacity: 1;
+}
+
+
+/*------------------Contact Sections----------------*/
+
+.contact {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 3rem;
+    color: #333;
+    gap: 2rem;
+    box-sizing: border-box;
+}
+
+.contact-text {
+    flex: 1;
+    min-width: 300px;
+    margin-top: 3.5%;
+}
+
+.contact-text h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+
+
+}
+
+.contact-text h3 {
+    margin-top: 10%;
+    font-size: 20px;
+}
+
+.contact-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.contact-text a {
+    color: #0077cc;
+    text-decoration: underline;
+}
+
+form {
+    flex: 1;
+    min-width: 300px;
+    padding: 2rem;
+
+
+}
+
+form h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+form label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+}
+
+form input[type="submit"] {
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #005fa3;
+}
+
+.name-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ffffff;
+
+    box-sizing: border-box;
+}
+
+#Linkedin {
+    width: 9%;
+}
+
+#github {
+    width: 9%;
+}
+
+/* -------------------- Responsive -------------------- */
+@media screen and (max-width: 1600px) {
+
+    .text h1 {
+        right: 1035px;
+    }
+
+    .text h2 {
+        right: 775px;
+    }
+
+    .text pre {
+        right: 870px;
+    }
+
+    .logo {
+        width: 4%;
+        padding: 20px 37px;
+    }
+
+}

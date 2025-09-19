@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Form Validation</title>
+    <style>
+        form p {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            width: 20%;
+            
+        }
+
+        form p label {
+            width: 150px;
+            margin-right: 10px;
+            text-align: right;
+            font-weight: bold;
+
+        }
+
+        form p input[type="text"],
+        form p input[type="password"] {
+            flex: 1;
+            padding: 5px;
+            font-size: 1em;
+        }
+
+        #errorMessages {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        #errorMessages.error {
+            color: red;
+        }
+        #errorMessages.success {
+            color: green;
+        }
+
+        .form2 {
+         padding: 2%;
+        }
+    </style>
+</head>
+<body>
+    <div class="form2">  
+    <h1>Simple Form Validation</h1>
+    <form name="form1" action="" onsubmit="return validateForm()" method="post" novalidate>
+        <p><label for="username">Username:</label><input id="username" type="text" name="username" value=""></p>
+        <p><label for="email">Email:</label><input id="email" type="text" name="email" value=""></p>
+        <p><label for="password1">Password:</label><input id="password1" type="password" name="password1" value=""></p>
+        <p><label for="password2">Confirm Password:</label><input id="password2" type="password" name="password2" value=""></p>
+        <p><input type="submit" value="Submit"></p>
+    </form>
+
+    <div id="errorMessages"></div>
+     </div>
+
+    <script>
+        function validateForm() {
+            const errors = [];
+
+            const form = document.forms["form1"];
+            const username = form["username"].value.trim();
+            const email = form["email"].value.trim();
+            const password1 = form["password1"].value;
+            const password2 = form["password2"].value;
+
+            const errorDiv = document.getElementById("errorMessages");
+            errorDiv.innerHTML = "";
+            errorDiv.className = "";
+
+            // Username validation
+            if (username === "") {
+                errors.push("Username must not be blank.");
+            }
+
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email === "") {
+                errors.push("Email must not be blank.");
+            } else if (!emailRegex.test(email)) {
+                errors.push("Email format is invalid.");
+            }
+
+            // Password validation
+            if (password1 === "") {
+                errors.push("Password must not be blank.");
+            }
+
+            if (password2 === "") {
+                errors.push("Confirm Password must not be blank.");
+            }
+
+            if (password1 !== "" && password2 !== "" && password1 !== password2) {
+                errors.push("Passwords must match.");
+            }
+
+            if (errors.length > 0) {
+                errorDiv.className = "error";
+                errorDiv.innerHTML = errors.map(e => `<p>${e}</p>`).join("");
+                return false;
+            } else {
+                errorDiv.className = "success";
+                errorDiv.innerHTML = "<p>Validation passed! Form is ready to submit.</p>";
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>

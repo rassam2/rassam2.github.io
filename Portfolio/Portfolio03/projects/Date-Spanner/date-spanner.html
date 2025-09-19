@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<link rel="stylesheet" href="date-spanner.css">
+
+
+
+<script>
+
+function calcDate()
+{
+//Input - get the data from the form
+var date1 = new Date(document. forms ["Form1"] ["date1"] . value);
+var date2 = new Date(document. forms ["Form1"] [ "date2"] . value) ;
+
+//Process
+const diffTime = Math.abs(date2 - date1); // Difference in milliseconds
+const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); // Convert to days
+const diffMonth = (diffDays / 30);
+const diffMonths = diffMonth.toFixed(2);
+const diffYear = (diffDays / 365);
+const diffYears = diffYear.toFixed(2);
+
+
+
+
+//output
+document.getElementById("answer1").value = "Result: " + diffDays.toString() + " Days";
+document.getElementById("answer2").value = "Result: " + diffMonth.toString() + " Months";
+document.getElementById("answer3").value = "Result: " + diffYears.toString() + " Years";
+
+return false; //stops the page refreshing
+}
+</script>
+
+<body> 
+    <div class="Spanner">   
+<h1>Date Spanner</h1>
+<p>Calculate Days Between 2 Dates</p>
+
+<div>
+<form name = "Form1" action="" method="post" onsubmit="return calcDate()">
+
+<label for="date1">Start Date: </label>
+<input type="date" id="date1" class="date" name="date1" required>
+<br>
+<label for="date2"> End Date :</label>
+<input type="date" id="date2" class="date" name="date2" required>
+<br><br>
+
+<button class="submit type="submit">Submit</button>
+
+<br>
+<label for="answer">Result in days :</label>
+<input type="text" id="answer1" name="answer" placeholder="Your result: "><br>
+<label for="answer">Result in months :</label>
+<input type="text" id="answer2" name="answer" placeholder="Your result: "><br>
+<label for="answer">Result in Year :</label>
+<input type="text" id="answer3" name="answer" placeholder="Your result: "><br>
+
+
+</form>
+  
+</div>
+  </div>
+</body>
