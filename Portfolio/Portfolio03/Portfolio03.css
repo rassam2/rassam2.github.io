@@ -3,18 +3,29 @@ body {
     margin: 0;
     overflow-x: hidden;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background: url("images/backround2.jpg") no-repeat center center fixed;
-    background-size: cover;
+    background-color: white;
     position: relative;
-
 }
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
 
 /* -------------------- Navigation -------------------- */
 ul {
     list-style-type: none;
     display: flex;
+    align-items: center;
+    margin: 0;
     width: 100%;
-    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
 }
 
 li {
@@ -22,69 +33,73 @@ li {
 }
 
 ul li a {
-    padding: 14px 16px;
+    padding: 10px 15px;
     text-decoration: none;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: rgb(135, 135, 135);
     color: white;
-    border-radius: 60%;
+    background-color: #480d73;
+    border-radius: 30px;
+    line-height: 1;
+    border-color: #f0f0f0;
     border-style: ridge;
 }
 
 ul li a:hover {
-    background-color: rgb(69, 69, 69);
+    background-color: #550099;
+    /* darker purple on hover */
 }
 
 /* Logo */
 .logo {
-    padding: 20px 37px;
-    width: 4%;
+    width: 50px;
+    height: auto;
 }
 
+/* Navbar links container */
 .nav-links {
     flex: 1;
     display: flex;
     justify-content: center;
-    margin-top: 2.1%;
+    margin-top: 0;
+    /* remove extra margin */
 }
 
-/* -------------------- Hide old <img> -------------------- */
-.backround-image {
-    display: none;
-
+/* -------------------- Hero Section -------------------- */
+.hero {
+    height: 100vh;
+    background: url("images/backround2.jpg") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 5%;
+    color: #480d73;
+    text-align: left;
+    margin-top: 10%;
 }
 
-.text {
+.hero .text {
+    margin-bottom: 40%;
+    width: 39%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
-    margin-left: 4%;
-    width: 35%;
-
 }
 
-.text h1 {
-
+.hero .text h1 {
     font-size: 70px;
-
-}
-
-.text h1,
-h2 {
     margin: 0;
-
-    padding: 0;
-
 }
 
-.text h1 {
-    margin-bottom: 5px;
-
+.hero .text h2 {
+    font-size: 30px;
+    margin-top: 10px;
 }
 
-
-
-
-
+.hero .text p {
+    font-size: 18px;
+    max-width: 600px;
+    margin-top: 20px;
+}
 
 
 
@@ -93,18 +108,19 @@ h2 {
 /* -------------------- Grey Overlay Section -------------------- */
 .overlay {
     position: relative;
-    background-color: rgba(128, 128, 128, 0.6);
     display: flex;
     align-items: flex-start;
-    margin-top: 43%;
-
+    margin-top: 0;
     z-index: 1;
-
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+
 .about-me {
-    color: white;
     width: 100%;
+    background-color: #480d73;
+    color: white;
+
 }
 
 hr {
@@ -125,38 +141,23 @@ hr {
     font-size: 30px;
 }
 
-/* ------------------ Enhanced Section Cards ------------------ */
-.who-am-i,
-.interests,
-.education {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(8px);
-    border-radius: 20px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-    padding: 40px;
-    margin: 40px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
-.who-am-i:hover,
-.interests:hover,
-.education:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
-}
+
 
 /* ------------------ Headings ------------------ */
 .who-am-i h2,
 .interests h2,
 .education h2 {
     font-size: 2rem;
-    color: #ffffff;
     margin-bottom: 20px;
     border-bottom: 2px solid #ffffff;
     display: inline-block;
     padding-bottom: 5px;
     text-transform: uppercase;
     letter-spacing: 1px;
+
+
+
 }
 
 /* ------------------ Paragraphs ------------------ */
@@ -164,7 +165,6 @@ hr {
 .interests p,
 .education p {
     font-size: 1.1rem;
-    color: #f0f0f0;
     line-height: 1.8;
     text-align: justify;
 }
@@ -192,19 +192,113 @@ hr {
     }
 }
 
+/*------------------Who am i Sections----------------*/
+.who-am-i {
+    padding: 5%;
+    background-color: #480d73;
+    color: white;
+}
+
+
+/*------------------interests Sections----------------*/
+
+.interests {
+    padding: 5%;
+    background-color: white;
+    color: #480d73;
+}
+
+/*------------------Education Sections----------------*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: #333;
+}
+
+#education {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+    color: #480d73;
+}
+
+#education h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: white;
+}
+
+/* GCSE Section */
+.gcse-section h3 {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.gcse-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.gcse-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.gcse-card .subject {
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.gcse-card .grade {
+    margin: 5px 0;
+    color: #480d73;
+    /* green color for grades */
+    font-size: 1.2em;
+}
+
+/* T Level Section */
+.tlevel-section {
+    margin-top: 50px;
+}
+
+.tlevel-section h3 {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.tlevel-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tlevel-card p {
+    margin: 10px 0;
+}
+
 
 /*------------------Skills Sections----------------*/
 
 .skills {
-    background-color: black;
+    background-color: white;
 
     padding: 40px;
 }
 
-
+.skills label {
+    color: #480d73;
+    font-size: 18px;
+    font-weight: bold;
+}
 
 .skills h2 {
     text-align: center;
+    color: #480d73;
 }
 
 .skills p {
@@ -239,25 +333,24 @@ hr {
 
 .progress-bar {
     width: 80%;
-    height: 16px;
-
-    background-color: rgb(51, 51, 51);
+    height: 25px;
+    background-color: #908598;
     border-radius: 12px;
     overflow: hidden;
-    margin-top: 5px;
+
 
 }
 
 
 .progress-fill {
     height: 100%;
-    background-color: rgb(31, 167, 0);
+    background-color: #480d73;
     width: 0;
     border-radius: 12px 0 0 12px;
-    transition: width 1s ease-in-out;
     padding-left: 10px;
     text-align: left;
-    color: white;
+
+
 }
 
 /*------------------Project Page Sections----------------*/
@@ -295,7 +388,7 @@ hr {
 .overlay-text {
     position: absolute;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background: #490d73b0;
     color: #fff;
     width: 100%;
     text-align: center;
@@ -314,13 +407,13 @@ hr {
 /*------------------Contact Sections----------------*/
 
 .contact {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     background-color: #fff;
     padding: 3rem;
-    color: #333;
+    color: #480d73;
     gap: 2rem;
     box-sizing: border-box;
 }
@@ -350,7 +443,7 @@ hr {
 }
 
 .contact-text a {
-    color: #0077cc;
+    color: #480d73;
     text-decoration: underline;
 }
 
@@ -365,7 +458,7 @@ form {
 form h2 {
     text-align: center;
     margin-bottom: 1.5rem;
-    color: #333;
+    color: #480d73;
 }
 
 form label {
@@ -388,7 +481,7 @@ form textarea {
 form input[type="submit"] {
     margin-top: 1.5rem;
     padding: 0.75rem 1.5rem;
-    background-color: #0077cc;
+    background-color: #480d73;
     color: white;
     border: none;
     border-radius: 4px;
@@ -452,4 +545,210 @@ form input[type="submit"]:hover {
         padding: 20px 37px;
     }
 
+}
+
+
+/* -------------------- Smooth Transitions -------------------- */
+
+/* Navbar links */
+ul li a {
+    transition: background-color 0.4s ease, transform 0.3s ease;
+}
+
+ul li a:hover {
+    transform: translateY(-3px) scale(1.05);
+}
+
+/* Logo hover */
+.logo {
+    transition: transform 0.5s ease;
+}
+
+.logo:hover {
+    transform: rotate(5deg) scale(1.1);
+}
+
+/* Hero text fade-in */
+.hero .text h1,
+.hero .text h2,
+.hero .text p {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s forwards;
+}
+
+.hero .text h1 {
+    animation-delay: 0.3s;
+}
+
+.hero .text h2 {
+    animation-delay: 0.6s;
+}
+
+.hero .text p {
+    animation-delay: 0.9s;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* -------------------- Global Transitions -------------------- */
+* {
+    transition: all 0.3s ease-in-out;
+}
+
+/* -------------------- Navigation -------------------- */
+ul li a {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+ul li a:hover {
+    background-color: #550099;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo subtle animation */
+.logo {
+    transition: transform 0.4s ease;
+}
+
+.logo:hover {
+    transform: rotate(-5deg) scale(1.1);
+}
+
+/* -------------------- Hero Section -------------------- */
+.hero .text h1,
+.hero .text h2,
+.hero .text p {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 1s ease forwards;
+}
+
+.hero .text h2 {
+    animation-delay: 0.3s;
+}
+
+.hero .text p {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* -------------------- Section Headings -------------------- */
+.who-am-i h2,
+.interests h2,
+.education h2 {
+    position: relative;
+    overflow: hidden;
+}
+
+.who-am-i h2::after,
+.interests h2::after,
+.education h2::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #ffffff;
+    transition: width 0.5s ease;
+}
+
+.who-am-i h2:hover::after,
+.interests h2:hover::after,
+.education h2:hover::after {
+    width: 100%;
+}
+
+/* ------------------ Cards (Education & Skills) ------------------ */
+.gcse-card,
+.tlevel-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gcse-card:hover,
+.tlevel-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* ------------------ Progress Bars ------------------ */
+.progress-fill {
+    animation: loadBar 2s ease forwards;
+}
+
+@keyframes loadBar {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 80%;
+    }
+
+    /* matches your set width */
+}
+
+/* ------------------ Project Boxes ------------------ */
+.project-box {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.project-box:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+}
+
+.project-box img {
+    transition: transform 0.6s ease;
+}
+
+/* Overlay text fade already included — just smoother */
+.overlay-text {
+    transition: opacity 0.5s ease, transform 0.3s ease;
+    transform: translateY(20px);
+}
+
+.project-box:hover .overlay-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ------------------ Contact Form ------------------ */
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form textarea {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="tel"]:focus,
+form textarea:focus {
+    border-color: #480d73;
+    box-shadow: 0 0 8px rgba(72, 13, 115, 0.4);
+}
+
+/* Submit button animation */
+form input[type="submit"] {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #550099;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
